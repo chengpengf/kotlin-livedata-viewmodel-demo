@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_home">首页</string>
+    <string name="title_hangqing">行情</string>
+    <string name="title_news">资讯</string>
+    <string name="title_education">投教</string>
+    <string name="title_trade">交易</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_information">新闻资讯</string>
+    <string name="education_platform">投教平台</string>
+    <string name="tip_warn">警告</string>
+    <string name="loading">加载中...</string>
+    <string name="tabbill">交易</string>
+    <string name="choosemerber">请选择会员公司</string>
+    <string name="merber_setting">会员设置</string>
+    <string name="input_account">投资者编号</string>
+    <string name="password">请输入密码</string>
+    <string name="changsheng_open">还没有账户？马上开户！</string>
+    <string name="forgot_pswd"><a href="">忘记密码</a></string>
+    <string name="forgot_user"><a href="">忘记投资者ID</a></string>
+    <string name="loginBtn">登录交易</string>
+    <string name="user_protocal">使用本软件参与SimNow模拟交易，需确认《TradeNow用户协议》、《SimNow用户协议》，请勾选按钮后登录交易</string>
+    <string name="check_protocal">此版本为模拟交易，请勾选确认协议</string>
+    <string name="tradenow_protocal">TradeNow用户协议</string>
+    <string name="simnow_protocal">SimNow用户协议</string>
+    <string name="no_check_protocal_btn">请先同意用户协议</string>
+</resources>

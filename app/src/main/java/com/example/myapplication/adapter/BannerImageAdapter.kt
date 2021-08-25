@@ -1,0 +1,45 @@
+package com.example.myapplication.adapter
+
+import android.content.Context
+import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.adapter.BannerImageAdapter.BannerViewHolder
+import com.example.myapplication.bean.BannerBean
+import com.example.myapplication.utils.GlideUtil
+import com.youth.banner.adapter.BannerAdapter
+
+class BannerImageAdapter(val mContext: Context, data: MutableList<BannerBean>?) : BannerAdapter<BannerBean, BannerViewHolder>(data) {
+
+    override fun onCreateHolder(parent: ViewGroup, viewType: Int): BannerViewHolder {
+        val imageView = ImageView(parent.context)
+        //注意，必须设置为match_parent，这个是viewpager2强制要求的
+        imageView.layoutParams = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
+        imageView.scaleType = ImageView.ScaleType.FIT_XY
+        return BannerViewHolder(imageView)
+    }
+
+    override fun onBindView(
+        holder: BannerViewHolder?,
+        data: BannerBean?,
+        position: Int,
+        size: Int
+    ) {
+        if ("" != data!!.url) {
+            GlideUtil.getInstance().loadUrlImage(mContext, data.cover, holder!!.imageView, true)
+        }
+    }
+
+    fun updateData(list: MutableList<BannerBean>){
+        this.mDatas.clear()
+        this.mDatas.addAll(list)
+        this.notifyDataSetChanged()
+    }
+
+    inner class BannerViewHolder(var imageView: ImageView) :
+        RecyclerView.ViewHolder(imageView)
+
+}
